@@ -49,7 +49,7 @@
 		this.radius = this.canvasHeight < this.canvasWidth ? this.canvasHeight / 2 : this.canvasWidth / 2;
 		this.radius = this.radius * this.options.circleScale;
 		this.lineWidth = this.options.lineWidth * 2;
-		this.hoverLineWidth = this.options.LineWidth + 4;
+		this.hoverLineWidth = this.options.hoverLineWidth ? this.options.hoverLineWidth * 2 : this.lineWidth + 8;
 		this.fontSize = this.options.fontSize * 2;
 
 	};
