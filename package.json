@@ -1,0 +1,32 @@
+{
+  "name": "perccircle",
+  "version": "1.0.0",
+  "description": "Javascript plugin to create circle showing percentage of data.",
+  "main": "PercCircle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fuxy526/PercCircle.git"
+  },
+  "keywords": [
+    "javascript",
+    "plugin",
+    "percentage",
+    "circle"
+  ],
+  "author": "Fuxy526",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fuxy526/PercCircle/issues"
+  },
+  "homepage": "https://github.com/Fuxy526/PercCircle#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.7",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}

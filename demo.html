@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PercCircle Demo</title>
+</head>
+<body>
+	<div id='chart' style="width: 400px; height: 200px; border: 1px solid #000;"></div>
+	
+	<script src="dist/PercCircle.min.js"></script>
+	<script>
+		var chart = new PercCircle('#chart', {
+			circleScale: 0.7,
+			lineWidth: 14,
+			hoverEffect: true,
+			hoverLineWidth: 18,
+			pointer: true,
+			showName: true,
+			showValue: false,
+			showPercent: true,
+			fontFamily: 'Microsoft Yahei',
+			fontSize: 14,
+			bold: true,
+			animate: true,
+			animateTime: 500,
+			data: [{
+				name: 'Used',
+				value: 32,
+				color: '#ccc'
+			}, {
+				name: 'Rest',
+				value: 70,
+				color: '#f00'
+			}, {
+				name: 'Others',
+				value: 50,
+				color: 'orange'
+			}]
+		});
+		chart.init();
+		
+	</script>
+</body>
+</html>
