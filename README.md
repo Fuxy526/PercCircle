@@ -1,6 +1,7 @@
 ##PercCircle
-PercCircle is a javascript plugin to create a circle showing percentage of data.
 ![](images/preview.png)
+
+PercCircle is a javascript plugin to create a circle showing percentage of data.
 
 ##Usage
 html:
@@ -31,7 +32,8 @@ javascript:
 PercCircle( el, opts )
 ```
 1. `el` the element you want to put the percent-circle chart in.
-There are two forms you can use ('string' or 'object'):
+
+	there are two forms you can use ('string' or 'object'):
 ```html
 // form 1
 var percentCircle = new PercCircle('#chart', options);
@@ -58,7 +60,7 @@ var percentCircle = new PercCircle(chart, options);
 | bold | Boolean | Whether font weight need to be bold. (need 'hoverEffect' and at least one of 'showName', 'showValue', 'showPercent' to be true) `default: true` |
 | animate | Boolean | Animation when initializing the plugin. `default: true` |
 | animateTime | Interger (ms) | Lasting time of animation. (need 'animate' to be true) `default: 500` |
-| data | Array | Data on which percent circle is based. When there is no data input, it will throw 'No data...' error. `default: []` |
+| data | Array | Data on which percent circle is based. If there is no data input, it will throw 'No data...' error. `default: []` |
 
 ##Public Methods
 1. `init` initialize the plugin.
