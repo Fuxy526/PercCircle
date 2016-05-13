@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+	<style type="text/css">
+		.container {
+			width: 450px;
+			margin: 10px auto;
+			border: 1px solid #666;
+			padding: 20px 0;
+		}
+		.info {
+			text-align: center;
+			font-size: 12px;
+			color: #999;
+		}
+		.color1 {color: #ffae00;}
+		.color2 {color: #9cdcf3;}
+		.color3 {color: #b8f0a8;}
+		.chart {height: 100px;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="info">已用120分钟</div>
+				<div class="info color1">剩余165分钟</div>
+				<div class="chart" id="chart1"></div>
+				<div class="info color1">语音</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="info">已用300M</div>
+				<div class="info color2">剩余100M</div>
+				<div class="chart" id="chart2"></div>
+				<div class="info color2">流量</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="info">已用50条</div>
+				<div class="info color3">剩余100条</div>
+				<div class="chart" id="chart3"></div>
+				<div class="info color3">短信</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../dist/PercCircle.min.js"></script>
+	<script>
+		var chart1 = new PercCircle('#chart1', {
+			lineWidth: 8,
+			hoverLineWidth: 10,
+			fontSize: 12,
+			showPercent: false,
+			data: [{
+				name: '已用',
+				value: 120,
+				color: '#ffae00'
+			}, {
+				name: '剩余',
+				value: 165,
+				color: '#ddd'
+			}]
+		});
+		var chart2 = new PercCircle('#chart2', {
+			lineWidth: 8,
+			hoverLineWidth: 10,
+			fontSize: 12,
+			showPercent: false,
+			data: [{
+				name: '已用',
+				value: 300,
+				color: '#9cdcf3'
+			}, {
+				name: '剩余',
+				value: 100,
+				color: '#ddd'
+			}]
+		});
+		var chart3 = new PercCircle('#chart3', {
+			lineWidth: 8,
+			hoverLineWidth: 10,
+			fontSize: 12,
+			showPercent: false,
+			data: [{
+				name: '已用',
+				value: 50,
+				color: '#b8f0a8'
+			}, {
+				name: '剩余',
+				value: 100,
+				color: '#ddd'
+			}]
+		});
+		chart1.init();
+		chart2.init();
+		chart3.init();
+	</script>
+</body>
+</html>

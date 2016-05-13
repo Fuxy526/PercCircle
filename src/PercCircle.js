@@ -164,8 +164,8 @@
 		var activeIndex = null;
 
 		this.canvas.addEventListener('mousemove', function(e) {
-			var x = e.clientX - this.offsetLeft;
-			var y = e.clientY - this.offsetTop;
+			var x = e.clientX - getLeft(this);
+			var y = e.clientY - getTop(this);
 			var dx = x - xc;
 			var dy = y - yc;
 			if (Math.abs(dx*dx) + Math.abs(dy*dy) >= rmin*rmin && Math.abs(dx*dx) + Math.abs(dy*dy) <= rmax*rmax) {
@@ -209,6 +209,22 @@
 		else if (x >= 0 && y > 0) {
 			return Math.atan(x/y) / Math.PI * 180;
 		}
+	}
+
+	function getTop(e) {
+		var offset = e.offsetTop;
+		if (e.offsetParent != null) {
+			offset = offset + getTop(e.offsetParent);
+		}
+		return offset;
+	}
+
+	function getLeft(e) {
+		var offset = e.offsetLeft;
+		if (e.offsetParent != null) {
+			offset = offset + getLeft(e.offsetParent);
+		}
+		return offset;
 	}
 
 })();
